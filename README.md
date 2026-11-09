@@ -126,6 +126,24 @@ amixer cset numid=5 30
 
 ---
 
+---
+
+## 配置
+
+改这几处：
+
+| 文件 | 要改的 |
+|---|---|
+| `dnc.py` / `devconn.py` | `OH2P_HOST` 环境变量，或直接改 `HOST` |
+| `speak.py` | `MAC_IP` 环境变量（你的 Mac 局域网 IP） |
+| `push3.sh` | `MAC=你的MacIP:8897` |
+| `launchd/*.plist` | `$HOME` 换成你的实际路径，或者直接用 `sed` 替换 |
+
+```bash
+# 例：批量改 IP
+sed -i '' 's/192.168.31.217/YOUR_MAC_IP/g; s/192.168.31.89/YOUR_SPEAKER_IP/g' *.py *.sh
+```
+
 ## 快速开始
 
 ### 前提

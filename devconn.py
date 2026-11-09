@@ -8,7 +8,7 @@
 """
 import subprocess, re, time, os, sys
 
-HOST = "192.168.31.89"
+HOST = os.environ.get("OH2P_HOST", "192.168.31.89")
 PORT = "2323"
 
 

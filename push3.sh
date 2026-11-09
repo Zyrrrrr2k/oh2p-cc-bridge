@@ -1,4 +1,5 @@
 #!/bin/sh
+# 改成你自己的 Mac 局域网 IP:端口
 MAC=192.168.31.217:8897
 LOG=/tmp/mico_aivs_lab/instruction.log
 while true; do
